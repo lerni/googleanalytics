@@ -2,7 +2,7 @@
 class GoogleAnalyticsExtender extends DataObjectDecorator	{
 	function contentControllerInit($controller) {
 		$accountId = $this->owner->SiteConfig->GoogleAnalyticsAccountID;
-		if(preg_match("/UA-[0-9]{7,}-[0-9]{1,}/", $accountId)) {
+		if(preg_match("/UA-[0-9]{7,}-[0-9]{1,}/", $accountId) &&  Director::isLive()) {
 			Requirements::customScript(<<<JS
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', '$accountId']);
