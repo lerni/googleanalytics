@@ -1,3 +1,3 @@
 <?php
-Object::add_extension('SiteConfig', 'GoogleAnalytics');
-Object::add_extension('Page', 'GoogleAnalyticsExtender');
+SiteConfig::add_extension("GoogleAnalytics");
+Page::add_extension("GoogleAnalyticsExtender");
