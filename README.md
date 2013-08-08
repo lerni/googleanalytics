@@ -2,7 +2,7 @@
 
 ## Maintainer Contact
 
-* Lukas Erni, <lukas (at) lerni (dot) ch>)
+* Lukas Erni, <lukas (at) lerni (dot) ch>
 
 
 ## Requirements
