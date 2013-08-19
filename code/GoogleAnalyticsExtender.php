@@ -4,19 +4,21 @@ class GoogleAnalyticsExtender extends DataExtension {
 		$accountId = $this->owner->SiteConfig->GoogleAnalyticsAccountID;
 		$gVerification = $this->owner->SiteConfig->GoogleSiteVerification;
 		if(preg_match("/UA-[0-9]{7,}-[0-9]{1,}/", $accountId) &&  Director::isLive()) {
-Requirements::customScript(<<<JS
-var _gaq = [['_setAccount', '$accountId'], ['_trackPageview']];
-(function(d, t) {
-	var g = d.createElement(t),
-		s = d.getElementsByTagName(t)[0];
-	g.async = true;
-	g.src = '//www.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g, s);
-})(document, 'script');
-JS
-);
+Requirements::insertHeadTags(sprintf(
+			'<script>
+  var _gaq = _gaq || [];
+  _gaq.push([\'_setAccount\', \'%s\']);
+  _gaq.push([\'_trackPageview\']);
+
+  (function() {
+    var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;
+    ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';
+    var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>', $accountId
+		));
 		}
-		if($gVerification) {
+		if($gVerification && $this->owner->ClassName == 'HomePage') {
 			Requirements::insertHeadTags('<meta name="google-site-verification" content="'. $gVerification .'" />');
 		}
 	}

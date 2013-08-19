@@ -23,4 +23,5 @@ A module to add Google Trackingcode & Siteverification Metatag per SiteConfig in
 ## Known Issues
 
 * Trackingcode is only shown in live-mode.
+* Siteverification will just output on class HomePage.
 * Probable the Tracking Code should be in a Template-File and not in php.
