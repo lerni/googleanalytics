@@ -1,14 +1,8 @@
-# Google Analytics (Universal Analytics) & Siteverification Metatag
-
-## Maintainer Contact
-
-* Lukas Erni, <lukas (at) lerni (dot) ch>)
-
+# Google Analytics (Universal Analytics)
 
 ## Requirements
 
 * Silverstripe 3.x
-
 
 ## Installation
 
@@ -22,7 +16,6 @@ A module to add Google Trackingcode (Universal Analytics) & Siteverification Met
 
 ## Known Issues
 
-* Siteverification will just output on class HomePage.
 * Trackingcode is only shown in live-mode.
 * The name of the Web-Property (see: https://support.google.com/analytics/answer/2790010?hl=en&ref_topic=2790009 )is assumed to be the domain-name without www-Prefix.
 * Probable the Tracking Code should be in a Template-File and not in php.
