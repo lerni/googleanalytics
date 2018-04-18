@@ -7,7 +7,7 @@ use FieldList;
 use HeaderField;
 use TextField;
 
-class GoogleAnalytics extends DataExtension {
+class SiteConfigExtender extends DataExtension {
 	private static $db = array(
 		'GoogleAnalyticsAccountID' => 'Varchar'
 	);

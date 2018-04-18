@@ -6,7 +6,7 @@ use DataExtension;
 use Director;
 use Requirements;
 
-class GoogleAnalyticsExtender extends DataExtension {
+class PageExtender extends DataExtension {
 	function contentControllerInit($controller) {
 		$accountId = $this->owner->SiteConfig->GoogleAnalyticsAccountID;
 		$gDomain = 'auto';
