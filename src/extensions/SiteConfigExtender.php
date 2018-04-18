@@ -17,7 +17,7 @@ class SiteConfigExtender extends DataExtension
 
 	public function updateCMSFields(FieldList $fields)
 	{
-		$fields->addFieldToTab("Root.Main", new HeaderField('Google'));
+		$fields->addFieldToTab("Root.Main", HeaderField::create('Google', 'Google'));
 		$fields->addFieldToTab('Root.Main',
 			new TextField('GoogleAnalyticsAccountID', 'Google Analytics Code (Example: UA-XXXXXXXX-X)', '', 14));
 	}
