@@ -1,4 +1,12 @@
 <?php
+
+namespace KraftAusdruck\GoogleAnalytics\Extensions;
+
+use DataExtension;
+use FieldList;
+use HeaderField;
+use TextField;
+
 class GoogleAnalytics extends DataExtension {
 	private static $db = array(
 		'GoogleAnalyticsAccountID' => 'Varchar'

@@ -1,0 +1,3 @@
+mappings:
+  GoogleAnalytics: KraftAusdruck\GoogleAnalytics\Extensions\GoogleAnalytics
+  GoogleAnalyticsExtender: KraftAusdruck\GoogleAnalytics\Extensions\GoogleAnalyticsExtender

@@ -1,4 +1,11 @@
 <?php
+
+namespace KraftAusdruck\GoogleAnalytics\Extensions;
+
+use DataExtension;
+use Director;
+use Requirements;
+
 class GoogleAnalyticsExtender extends DataExtension {
 	function contentControllerInit($controller) {
 		$accountId = $this->owner->SiteConfig->GoogleAnalyticsAccountID;
