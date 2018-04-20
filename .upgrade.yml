@@ -1,0 +1,3 @@
+mappings:
+  GoogleAnalytics: KraftAusdruck\GoogleAnalytics\Extensions\SiteConfigExtender
+  GoogleAnalyticsExtender: KraftAusdruck\GoogleAnalytics\Extensions\PageExtender

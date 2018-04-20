@@ -1,10 +1,22 @@
 <?php
-class GoogleAnalyticsExtender extends DataExtension {
-	function contentControllerInit($controller) {
+
+namespace KraftAusdruck\GoogleAnalytics\Extensions;
+
+
+use SilverStripe\Control\Director;
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\View\Requirements;
+
+
+class PageExtender extends DataExtension
+{
+	public function contentControllerInit($controller)
+	{
 		$accountId = $this->owner->SiteConfig->GoogleAnalyticsAccountID;
 		$gDomain = 'auto';
-		if(preg_match("/UA-[0-9]{7,}-[0-9]{1,}/", $accountId) &&  Director::isLive()) {
-			if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false) {
+		if (preg_match("/UA-[0-9]{7,}-[0-9]{1,}/", $accountId) && Director::isLive()) {
+			if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'],
+					'Speed Insights') === false) {
 				Requirements::insertHeadTags(sprintf(
 					'<script>
   (function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){
