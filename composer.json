@@ -1,0 +1,29 @@
+
+{
+	"name": "lerni/silverstripe-googleanalytics",
+	"type": "silverstripe-vendormodule",
+	"description": "Simple Google Analytics Module for SilverStripe",
+	"keywords": [
+		"SilverStripe",
+		"Google",
+		"Google Analytics"
+	],
+	"homepage": "https://github.com/lerni/googleanalytics",
+	"license": "The MIT License (MIT)",
+	"authors": [{
+		"name": "Lukas Erni",
+		"homepage": "http://kraftausdruck.ch",
+		"email": "le@kraftausdruck.ch"
+	}],
+	"require": {
+		"silverstripe/framework": "^3",
+		"silverstripe/cms": "^3"
+	},
+	"minimum-stability": "dev",
+	"extra": {
+		"installer-name": "googleanalytics"
+	},
+	"support": {
+	    "issues": "https://github.com/lerni/googleanalytics/issues"
+	}
+}
