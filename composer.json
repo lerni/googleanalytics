@@ -9,7 +9,7 @@
 		"Google Analytics"
 	],
 	"homepage": "https://github.com/lerni/googleanalytics",
-	"license": "The MIT License (MIT)",
+	"license": "BSD-3-Clause",
 	"authors": [{
 		"name": "Lukas Erni",
 		"homepage": "http://kraftausdruck.ch",
