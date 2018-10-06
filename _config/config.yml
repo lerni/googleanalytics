@@ -1,5 +1,7 @@
 ---
 Name: googleanalytics
+After:
+  - 'mysite/*'
 ---
 SiteConfig:
   extensions:
