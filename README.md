@@ -1,4 +1,4 @@
-# Google Analytics
+# Google Analytics, Tag-Manager
 
 ## Requirements
 
@@ -11,7 +11,7 @@ Download, place the folder "googleanalytics" in your project root and run a dev/
 
 ## Usage Overview
 
-A module to add Google Trackingcode per SiteConfig in CMS
+A module to add Analytics & Tag-Manager Trackingcode per SiteConfig in CMS
 
 
 ## Known Issues / Hints

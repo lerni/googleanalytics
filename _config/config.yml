@@ -1,0 +1,9 @@
+---
+Name: googleanalytics
+---
+SiteConfig:
+  extensions:
+    - GoogleAnalytics
+Page:
+  extensions:
+    - GoogleAnalyticsExtender
