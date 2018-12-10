@@ -4,8 +4,8 @@ Name: googleanalytics
 
 SilverStripe\CMS\Model\SiteTree:
   extensions:
-    - KraftAusdruck\GoogleAnalytics\Extensions\PageExtender
+    - Kraftausdruck\Extensions\PageExtender
 
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - KraftAusdruck\GoogleAnalytics\Extensions\SiteConfigExtender
+    - Kraftausdruck\Extensions\SiteConfigExtender
