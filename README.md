@@ -16,3 +16,4 @@ Set the Trackin IDs in yoursite.tld/admin/settings and you're set.
 
 ## Hint
 * Trackingcode is only shown in live-mode.
+* opt-out like <a href="javascript:gaOptout()">Click to opt-out of Google Analytics</a>
