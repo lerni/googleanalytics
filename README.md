@@ -9,11 +9,12 @@ The easiest way is to use [composer](https://getcomposer.org/):
 
 	`composer require lerni/silverstripe-googleanalytics`
 
-Run `dev/build` either way.
+Run `dev/build`
 
 ## How to use
 Set the Trackin IDs in yoursite.tld/admin/settings and you're set.
 
 ## Hint
+* You don't need to setup a tag for page load - it's triggerd per script
 * Trackingcode is only shown in live-mode.
-* opt-out like <a href="javascript:gaOptout()">Click to opt-out of Google Analytics</a>
+* opt-out like `<a href="javascript:gaOptout()">`Click to opt-out of Google Analytics`</a>`
