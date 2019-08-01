@@ -3,11 +3,11 @@
 namespace Kraftausdruck\Extensions;
 
 use SilverStripe\Control\Director;
-use SilverStripe\ORM\Extension;
+use SilverStripe\Core\Extension;;
 use SilverStripe\View\ArrayData;
 use SilverStripe\View\Requirements;
 
-class PageExtender extends Extension
+class PageExtension extends Extension
 {
 	public function contentControllerInit($controller)
 	{
