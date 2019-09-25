@@ -3,7 +3,7 @@
 namespace Kraftausdruck\Extensions;
 
 use SilverStripe\Control\Director;
-use SilverStripe\Core\Extension;;
+use SilverStripe\Core\Extension;
 use SilverStripe\View\ArrayData;
 use SilverStripe\View\Requirements;
 
