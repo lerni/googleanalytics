@@ -3,8 +3,7 @@
 	"type": "silverstripe-vendormodule",
 	"description": "Simple Google Analytics & Tag Manager Module for SilverStripe 4",
 	"keywords": [
-		"SilverStripe",
-		"Google",
+		"Silverstripe",
 		"Google Analytics",
 		"Google Tag Manager"
 	],
@@ -26,5 +25,8 @@
 	},
 	"support": {
 	    "issues": "https://github.com/lerni/googleanalytics/issues"
+	},
+	"suggest": {
+		"lerni/klaro-cookie-consent": "Silverstripe Klaro! Consent Manager"
 	}
 }

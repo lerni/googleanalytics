@@ -1,15 +1,5 @@
-<script async src="https://www.googletagmanager.com/gtag/js?id={$accountId}"></script>
-<script>
-	var gaProperty = '{$accountId}';
-	var disableStr = 'ga-disable-' + gaProperty;
-	if (document.cookie.indexOf(disableStr + '=true') > -1) {
-		window[disableStr] = true;
-	}
-	function gaOptout() {
-		document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-		window[disableStr] = true;
-		alert('tracking is disabled!');
-	}
+<script async <% if $SiteConfig.CookieIsActive %>type="text/plain" data-type="application/javascript" data-name="google-analytics" data-<% end_if %>src="https://www.googletagmanager.com/gtag/js?id={$accountId}"></script>
+<script <% if $SiteConfig.CookieIsActive %>type="text/plain" data-type="application/javascript" data-name="google-analytics"<% end_if %>>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
