@@ -9,7 +9,7 @@ class GoogleAnalyticsExtender extends Extension {
 			'GTMAccountId' => $GTMAccountId
 		));
 		if(preg_match("/UA-[0-9]{7,}-[0-9]{1,}/", $accountId) &&  Director::isLive()) {
-			$analyticsString = $arrayData->renderWith('Ananlytics');
+			$analyticsString = $arrayData->renderWith('Analytics');
 			Requirements::insertHeadTags($analyticsString);
 		}
 	}
