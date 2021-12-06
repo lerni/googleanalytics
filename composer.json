@@ -1,32 +1,37 @@
 {
-	"name": "lerni/silverstripe-googleanalytics",
-	"type": "silverstripe-vendormodule",
-	"description": "Simple Google Analytics & Tag Manager Module for SilverStripe 4",
-	"keywords": [
-		"Silverstripe",
-		"Google Analytics",
-		"Google Tag Manager"
-	],
-	"homepage": "https://github.com/lerni/googleanalytics",
-	"license": "BSD-3-Clause",
-	"authors": [{
-		"name": "Lukas Erni",
-		"homepage": "https://kraftausdruck.ch",
-		"email": "le@kraftausdruck.ch"
-	}],
-	"require": {
-		"silverstripe/framework": "^4",
-		"silverstripe/cms": "^4",
-		"silverstripe/siteconfig": "^4"
-	},
-	"minimum-stability": "dev",
-	"extra": {
-		"installer-name": "googleanalytics"
-	},
-	"support": {
-	    "issues": "https://github.com/lerni/googleanalytics/issues"
-	},
-	"suggest": {
-		"lerni/klaro-cookie-consent": "Silverstripe Klaro! Consent Manager"
-	}
+    "name": "lerni/silverstripe-googleanalytics",
+    "type": "silverstripe-vendormodule",
+    "description": "Simple Google Analytics & Tag Manager Module for SilverStripe 4",
+    "keywords": [
+        "Silverstripe",
+        "Google Analytics",
+        "Google Tag Manager"
+    ],
+    "homepage": "https://github.com/lerni/googleanalytics",
+    "license": "BSD-3-Clause",
+    "authors": [{
+        "name": "Lukas Erni",
+        "homepage": "https://kraftausdruck.ch",
+        "email": "le@kraftausdruck.ch"
+    }],
+    "require": {
+        "silverstripe/framework": "^4",
+        "silverstripe/cms": "^4",
+        "silverstripe/siteconfig": "^4"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "installer-name": "googleanalytics"
+    },
+    "support": {
+        "issues": "https://github.com/lerni/googleanalytics/issues"
+    },
+    "suggest": {
+        "lerni/klaro-cookie-consent": "Silverstripe Klaro! Consent Manager"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kraftausdruck\\Extensions\\": "src/kraftausdruck/extensions/"
+        }
+    }
 }
