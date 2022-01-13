@@ -8,3 +8,16 @@ SilverStripe\CMS\Model\SiteTree:
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - Kraftausdruck\Extensions\SiteConfigExtension
+
+SilverStripe\Control\Director:
+  rules:
+    'BingSiteAuth.xml': 'Kraftausdruck\Controller\BingSiteAuthController'
+
+SilverStripe\MimeValidator\MimeUploadValidator:
+  MimeTypes:
+    svg:
+      - 'text/xml'
+
+SilverStripe\Assets\File:
+    allowed_extensions:
+    - xml

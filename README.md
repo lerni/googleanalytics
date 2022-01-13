@@ -1,6 +1,6 @@
-# Silverstripe Google Analytics & Tag Manager Module
+# Silverstripe Analytics, Tag Manager & Clarity Module
 
-A module to add Google Analytics & Tag-Manager (just script version but not noscript iframe) Trackingcode per SiteConfig in CMS
+A module to add Google Analytics (UA, v4) & Tag-Manager (just script version but not noscript iframe) & Clarity Trackingcode per SiteConfig in CMS
 
 ## Requirements
 
@@ -19,12 +19,13 @@ A module to add Google Analytics & Tag-Manager (just script version but not nosc
 
 Run `dev/build`
 
+This module allows XML files to be uploaded into assets.
+
 ## How to use
 
 Set the Tracking IDs in yoursite.tld/admin/settings and you're set.
 
 ## Hint
 
--   You don't need to setup a tag for page load - it's triggerd per script
--   Trackingcode is only shown in live-mode.
+-   Trackingcodes are only shown in live-mode.
 -   opt-out may use `lerni/klaro-cookie-consent`
