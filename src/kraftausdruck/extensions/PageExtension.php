@@ -19,7 +19,7 @@ class PageExtension extends Extension
         $arrayData = new ArrayData([
             'accountId' => $accountId,
             'GTMAccountId' => $GTMAccountId,
-            'GTMAccountIds' => $accountV4IDs,
+            'AccountV4IDs' => $accountV4IDs,
             'Clarity' => $clarity
         ]);
         if (Director::isLive()) {

@@ -10,14 +10,12 @@
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','{$GTMAccountId}');<% end_if %>
 </script><% end_if %>
-<% if $GoogleAnalyticsAccountV4IDs %><script async src="https://www.googletagmanager.com/gtag/js?id={$GoogleAnalyticsAccountV4IDs.First()}"></script>
+<% if $AccountV4IDs %><script async src="https://www.googletagmanager.com/gtag/js?id={$GoogleAnalyticsAccountV4IDs.First()}"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
-<% loop $GoogleAnalyticsAccountV4IDs %>
-	gtag('config', '{$Item}');
-<% end_loop %>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments)};
+	gtag('js', new Date());
+	<% loop $AccountV4IDs %>gtag('config', '{$Item}');<% end_loop %>
 </script><% end_if %>
 <% if $Clarity %><script <% if $SiteConfig.CookieIsActive %>type="text/plain" data-type="application/javascript" data-name="clarity"<% end_if %>>
 	(function(c,l,a,r,i,t,y){
