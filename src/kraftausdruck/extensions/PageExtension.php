@@ -27,7 +27,7 @@ class PageExtension extends Extension
                 Requirements::insertHeadTags('<link rel="preconnect" href="https://www.googletagmanager.com">');
             }
             if (!empty($clarity)) {
-                Requirements::insertHeadTags('<link rel="preconnect" https://www.clarity.ms">');
+                Requirements::insertHeadTags('<link rel="preconnect" href="https://www.clarity.ms">');
             }
             $trackingString = $arrayData->renderWith('Analytics');
             Requirements::insertHeadTags($trackingString);
