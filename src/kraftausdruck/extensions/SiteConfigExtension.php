@@ -36,7 +36,7 @@ class SiteConfigExtension extends DataExtension
         $tagField = TextField::create('GoogleAnalyticsAccountID', 'Google Analytics Code (Example: UA-XXXXXXXX-X)');
         $GTMAccountField = TextField::create('GTMAccountID', 'Google-Tag-Manager (Example: GTM-XXXX)', '', 13);
         $GoogleAnalyticsAccountV4IDsField = TextareaField::create('GoogleAnalyticsAccountV4IDs', 'Google Analytics v4 (Example: G-XXXXXX)', '', 13);
-        $GoogleAnalyticsAccountV4IDsField->setDescription(_t('Kraftausdruck\Extensions\SiteConfigExtension.GoogleAnalyticsAccountV4IDsFieldDescription', 'One per Line for if muliple!'));
+        $GoogleAnalyticsAccountV4IDsField->setDescription(_t('Kraftausdruck\Extensions\SiteConfigExtension.GoogleAnalyticsAccountV4IDsFieldDescription', 'One per line if muliple!'));
         $fields->addFieldsToTab($tab, [
             HeaderField::create('GoogleHeading', 'Google'),
             $tagField,
