@@ -31,7 +31,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Kraftausdruck\\Extensions\\": "src/kraftausdruck/extensions/"
+            "Kraftausdruck\\Extensions\\": "src/kraftausdruck/Extensions/",
+            "Kraftausdruck\\Controller\\": "src/kraftausdruck/Controller/"
         }
     }
 }
