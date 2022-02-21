@@ -17,7 +17,7 @@ class PageTrackingExtension extends Extension
         $GTMAccountId = $this->owner->SiteConfig->GTMAccountID;
         $accountV4IDs = $this->PerLine($this->owner->SiteConfig->GoogleAnalyticsAccountV4IDs);
         $clarity = $this->owner->SiteConfig->Clarity;
-        $preconnect = Config::inst()->get('Kraftausdruck\Extensions\PageTrackingExtension', 'preconnect');;
+        $preconnect = Config::inst()->get('Kraftausdruck\Extensions\PageTrackingExtension', 'preconnect');
         $arrayData = new ArrayData([
             'AccountId' => $accountId,
             'GTMAccountId' => $GTMAccountId,
