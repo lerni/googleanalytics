@@ -3,7 +3,7 @@ Name: googleanalytics
 ---
 SilverStripe\CMS\Model\SiteTree:
   extensions:
-    - Kraftausdruck\Extensions\PageExtension
+    - Kraftausdruck\Extensions\PageTrackingExtension
 
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
@@ -19,5 +19,8 @@ SilverStripe\MimeValidator\MimeUploadValidator:
       - 'text/xml'
 
 SilverStripe\Assets\File:
-    allowed_extensions:
+  allowed_extensions:
     - xml
+
+# Kraftausdruck\Extensions\PageTrackingExtension:
+#   preconnect: 'true'
