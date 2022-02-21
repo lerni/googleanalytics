@@ -10,7 +10,7 @@
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','{$GTMAccountId}');<% end_if %>
 </script><% end_if %>
-<% if $AccountV4IDs %><script async <% if $SiteConfig.CookieIsActive %>type="text/plain" data-type="application/javascript" data-name="google-analytics" data-<% end_if %>src="https://www.googletagmanager.com/gtag/js?id={$AccountV4IDs.First()}"></script>
+<% if $AccountV4IDs.Count() %><script async <% if $SiteConfig.CookieIsActive %>type="text/plain" data-type="application/javascript" data-name="google-analytics" data-<% end_if %>src="https://www.googletagmanager.com/gtag/js?id={$AccountV4IDs.First().Item}"></script>
 <script <% if $SiteConfig.CookieIsActive %>type="text/plain" data-type="application/javascript" data-name="google-analytics"<% end_if %>>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments)};
