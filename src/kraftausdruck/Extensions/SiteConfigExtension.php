@@ -33,34 +33,21 @@ class SiteConfigExtension extends DataExtension
     {
         $tab = 'Root.Tracking';
 
-        $tagField = TextField::create('GoogleAnalyticsAccountID', 'Google Analytics Code (Example: UA-XXXXXXXX-X)');
-        $GTMAccountField = TextField::create('GTMAccountID', 'Google-Tag-Manager (Example: GTM-XXXX)', '', 13);
-        $GoogleAnalyticsAccountV4IDsField = TextareaField::create('GoogleAnalyticsAccountV4IDs', 'Google Analytics v4 (Example: G-XXXXXX)', '', 13);
-        $GoogleAnalyticsAccountV4IDsField->setDescription(_t('Kraftausdruck\Extensions\SiteConfigExtension.GoogleAnalyticsAccountV4IDsFieldDescription', 'One per line if muliple!'));
+        $tagField = TextField::create('GoogleAnalyticsAccountID', _t(__CLASS__ . '.GoogleAnalyticsAccountIDField', 'Google Analytics Code (Example: UA-XXXXXXXX-X)'));
+        $GTMAccountField = TextField::create('GTMAccountID', _t(__CLASS__ . '.GTMAccountIDField', 'Google Analytics v4 (Example: G-XXXXXX)'), '', 13);
+        $GoogleAnalyticsAccountV4IDsField = TextareaField::create('GoogleAnalyticsAccountV4IDs', _t(__CLASS__ . '.GoogleAnalyticsAccountV4IDsField', 'Google Analytics v4 (Example: G-XXXXXX)'), '', 13);
+        $GoogleAnalyticsAccountV4IDsField->setDescription(_t(__CLASS__ . '.GoogleAnalyticsAccountV4IDsFieldDescription', 'One per line if muliple!'));
         $fields->addFieldsToTab($tab, [
-            HeaderField::create('GoogleHeading', 'Google'),
+            HeaderField::create('GoogleHeading', _t(__CLASS__ . '.GoogleHeadingField', 'Google')),
             $tagField,
             $GTMAccountField,
             $GoogleAnalyticsAccountV4IDsField
         ]);
 
-        $fields->addFieldToTab(
-            'Root.Main',
-            $DefaultHeaderImageField = UploadField::create(
-                $name = 'DefaultHeaderImage',
-                $title = _t('SilverStripe\SiteConfig\SiteConfig.DEFAULTHEADERIMAGE', 'Displayed if no Hero in ElementPage')
-            )
-        );
-        $DefaultHeaderImageField->setFolderName('Slides');
-        $size = 5 * 1024 * 1024;
-        $DefaultHeaderImageField->getValidator()->setAllowedMaxFileSize($size);
-        $DefaultHeaderImageField->setDescription(_t('SilverStripe\SiteConfig\SiteConfig.DefaultHeaderImageDescription', '2600x993px'));
-
-
         $fields->addFieldsToTab($tab, [
-            HeaderField::create('ClarityHeading', 'Clarity'),
-            TextField::create('Clarity', 'Clarity Tracking ID'),
-            UploadField::create('BingSiteAuthFile', 'BingSiteAuth.xml')
+            HeaderField::create('ClarityHeading', _t(__CLASS__ . '.ClarityHeadingField', 'Clarity')),
+            TextField::create('Clarity', _t(__CLASS__ . '.ClarityField', 'Clarity Tracking ID')),
+            UploadField::create('BingSiteAuthFile', _t(__CLASS__ . '.BingSiteAuthFileField', 'BingSiteAuth.xml'))
         ]);
     }
 }
