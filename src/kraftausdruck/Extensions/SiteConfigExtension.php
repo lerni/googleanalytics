@@ -33,10 +33,10 @@ class SiteConfigExtension extends DataExtension
     {
         $tab = 'Root.Tracking';
 
-        $tagField = TextField::create('GoogleAnalyticsAccountID', _t(__CLASS__ . '.GoogleAnalyticsAccountIDField', 'Google Analytics Code (Example: UA-XXXXXXXX-X)'));
-        $GTMAccountField = TextField::create('GTMAccountID', _t(__CLASS__ . '.GTMAccountIDField', 'Google Analytics v4 (Example: G-XXXXXX)'), '', 13);
-        $GoogleAnalyticsAccountV4IDsField = TextareaField::create('GoogleAnalyticsAccountV4IDs', _t(__CLASS__ . '.GoogleAnalyticsAccountV4IDsField', 'Google Analytics v4 (Example: G-XXXXXX)'), '', 13);
-        $GoogleAnalyticsAccountV4IDsField->setDescription(_t(__CLASS__ . '.GoogleAnalyticsAccountV4IDsFieldDescription', 'One per line if muliple!'));
+        $tagField = TextField::create('GoogleAnalyticsAccountID', _t(__CLASS__ . '.GoogleAnalyticsAccountIDField', 'Google Analytics Code (UA-XXXXXXXX-X)'));
+        $GTMAccountField = TextField::create('GTMAccountID', _t(__CLASS__ . '.GTMAccountIDField', 'Google Tag Manager (GTM-XXXXXXX)'), '', 13);
+        $GoogleAnalyticsAccountV4IDsField = TextareaField::create('GoogleAnalyticsAccountV4IDs', _t(__CLASS__ . '.GoogleAnalyticsAccountV4IDsField', 'Google Analytics v4 (G-XXXXXXXXXX)'), '', 13);
+        $GoogleAnalyticsAccountV4IDsField->setDescription(_t(__CLASS__ . '.GoogleAnalyticsAccountV4IDsFieldDescription', 'One per line if multiple!'));
         $fields->addFieldsToTab($tab, [
             HeaderField::create('GoogleHeading', _t(__CLASS__ . '.GoogleHeadingField', 'Google')),
             $tagField,
