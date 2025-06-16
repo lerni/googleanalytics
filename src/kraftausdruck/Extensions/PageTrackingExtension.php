@@ -16,20 +16,26 @@ class PageTrackingExtension extends Extension
     {
         $member = Security::getCurrentUser();
         if (Director::isLive() && !$member) {
-            $accountId = $this->owner->SiteConfig->GoogleAnalyticsAccountID;
-            $GTMAccountId = $this->owner->SiteConfig->GTMAccountID;
-            $accountV4IDs = $this->PerLine($this->owner->SiteConfig->GoogleAnalyticsAccountV4IDs);
-            $clarity = $this->owner->SiteConfig->Clarity;
+            $siteConfig = $this->owner->SiteConfig;
+            $accountId = $siteConfig->GoogleAnalyticsAccountID;
+            $GTMAccountId = $siteConfig->GTMAccountID;
+            $accountV4IDs = $this->PerLine($siteConfig->GoogleAnalyticsAccountV4IDs);
+            $clarity = $siteConfig->Clarity;
+            $consentModeEnabled = $siteConfig->ConsentModeEnabled;
+            $consentModeAdvanced = $siteConfig->ConsentModeAdvanced;
+
             $preconnect = Config::inst()->get('Kraftausdruck\Extensions\PageTrackingExtension', 'preconnect');
             $arrayData = new ArrayData([
                 'AccountId' => $accountId,
                 'GTMAccountId' => $GTMAccountId,
                 'AccountV4IDs' => $accountV4IDs,
-                'Clarity' => $clarity
+                'Clarity' => $clarity,
+                'ConsentModeEnabled' => $consentModeEnabled,
+                'ConsentModeAdvanced' => $consentModeAdvanced
             ]);
 
-            if ( $preconnect === 'true') {
-                if (!empty($accountId) || !empty($GTMAccountIds) || !empty($accountV4IDs)) {
+            if ($preconnect === 'true') {
+                if (!empty($accountId) || !empty($GTMAccountId) || !empty($accountV4IDs)) {
                     Requirements::insertHeadTags('<link rel="preconnect" href="https://www.googletagmanager.com">');
                 }
                 if (!empty($clarity)) {

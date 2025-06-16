@@ -1,7 +1,7 @@
 {
     "name": "lerni/silverstripe-googleanalytics",
     "type": "silverstripe-vendormodule",
-    "description": "Simple Google Analytics & Tag Manager Module for SilverStripe 4",
+    "description": "Google Analytics, Tag Manager & Microsoft Clarity Tracking Module for Silverstripe",
     "keywords": [
         "Silverstripe",
         "Google Analytics",
@@ -16,8 +16,8 @@
         "email": "le@kraftausdruck.ch"
     }],
     "require": {
-        "silverstripe/framework": "^4.0 || ^5.0",
-        "silverstripe/cms": "^4.0 || ^5.0"
+        "silverstripe/framework": "^5.0",
+        "silverstripe/cms": "^5.0"
     },
     "minimum-stability": "dev",
     "extra": {

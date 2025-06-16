@@ -3,22 +3,23 @@
 namespace Kraftausdruck\Extensions;
 
 use SilverStripe\Assets\File;
+use SilverStripe\Core\Extension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Forms\HeaderField;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
-
-class SiteConfigExtension extends DataExtension
+class SiteConfigExtension extends Extension
 {
     private static $db = [
         'GoogleAnalyticsAccountID' => 'Text',
         'GTMAccountID' => 'Varchar',
         'GoogleAnalyticsAccountV4IDs' => 'Text',
-        'Clarity' => 'Varchar'
+        'Clarity' => 'Varchar',
+        'ConsentModeEnabled' => 'Boolean',
+        'ConsentModeAdvanced' => 'Boolean'
     ];
 
     private static $has_one = [
@@ -42,6 +43,14 @@ class SiteConfigExtension extends DataExtension
             $tagField,
             $GTMAccountField,
             $GoogleAnalyticsAccountV4IDsField
+        ]);
+
+        $fields->addFieldsToTab($tab, [
+            HeaderField::create('ConsentModeHeading', _t(__CLASS__ . '.ConsentModeHeadingField', 'Google Consent Mode v2')),
+            CheckboxField::create('ConsentModeEnabled', _t(__CLASS__ . '.ConsentModeEnabledField', 'Enable Google Consent Mode v2'))
+                ->setDescription(_t(__CLASS__ . '.ConsentModeEnabledDescription', 'Enables Google Consent Mode v2 for privacy-compliant tracking')),
+            CheckboxField::create('ConsentModeAdvanced', _t(__CLASS__ . '.ConsentModeAdvancedField', 'Use Advanced Consent Mode'))
+                ->setDescription(_t(__CLASS__ . '.ConsentModeAdvancedDescription', 'Send pings even when consent is denied (helps with conversion modeling)'))
         ]);
 
         $fields->addFieldsToTab($tab, [
