@@ -33,7 +33,7 @@ class BingSiteAuthController extends Controller
         $filename_absolute  = $base . '/public/assets/' . $filename_relative;
 
         $this->getResponse()->addHeader("Content-Type", "text/xml; charset=utf-8");
-
+        
         if (file_exists($filename_absolute) && strtolower($siteConfig->BingSiteAuthFile->getExtension()) == 'xml') {
             $file_content = file_get_contents($filename_absolute, true);
             return $file_content;

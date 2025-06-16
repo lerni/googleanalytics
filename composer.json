@@ -1,15 +1,14 @@
 {
-    "name": "lerni/silverstripe-tracking",
+    "name": "lerni/silverstripe-googleanalytics",
     "type": "silverstripe-vendormodule",
     "description": "Google Analytics, Tag Manager & Microsoft Clarity Tracking Module for Silverstripe",
     "keywords": [
         "Silverstripe",
         "Google Analytics",
         "Google Tag Manager",
-        "Clarity",
-        "Tracking"
+        "Clarity"
     ],
-    "homepage": "https://github.com/lerni/silverstripe-tracking",
+    "homepage": "https://github.com/lerni/googleanalytics",
     "license": "BSD-3-Clause",
     "authors": [{
         "name": "Lukas Erni",
@@ -22,10 +21,10 @@
     },
     "minimum-stability": "dev",
     "extra": {
-        "installer-name": "tracking"
+        "installer-name": "googleanalytics"
     },
     "support": {
-        "issues": "https://github.com/lerni/silverstripe-tracking/issues"
+        "issues": "https://github.com/lerni/googleanalytics/issues"
     },
     "suggest": {
         "lerni/klaro-cookie-consent": "Silverstripe Klaro! Consent Manager"
@@ -34,8 +33,5 @@
         "psr-4": {
             "Kraftausdruck\\": "src/kraftausdruck/"
         }
-    },
-    "replace": {
-        "lerni/silverstripe-googleanalytics": "self.version"
     }
 }
