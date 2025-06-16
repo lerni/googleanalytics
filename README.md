@@ -16,7 +16,7 @@ A Silverstripe module for Google Analytics (UA, v4), Google Tag Manager, Microso
 [Composer](https://getcomposer.org/) is the recommended way of installing Silverstripe modules.
 
 ```bash
-composer require lerni/silverstripe-googleanalytics
+composer require lerni/silverstripe-tracking
 ```
 
 Run `dev/build`
