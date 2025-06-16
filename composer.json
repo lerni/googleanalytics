@@ -1,7 +1,7 @@
 {
     "name": "lerni/silverstripe-googleanalytics",
     "type": "silverstripe-vendormodule",
-    "description": "Simple Google Analytics & Tag Manager Module for SilverStripe 4",
+    "description": "DEPRECATED: Use lerni/silverstripe-tracking instead. Google Analytics, Tag Manager & Microsoft Clarity Tracking Module for Silverstripe",
     "keywords": [
         "Silverstripe",
         "Google Analytics",
@@ -16,15 +16,14 @@
         "email": "le@kraftausdruck.ch"
     }],
     "require": {
-        "silverstripe/framework": "^4.0 || ^5.0",
-        "silverstripe/cms": "^4.0 || ^5.0"
+        "lerni/silverstripe-tracking": "^5.0"
     },
     "minimum-stability": "dev",
     "extra": {
         "installer-name": "googleanalytics"
     },
     "support": {
-        "issues": "https://github.com/lerni/googleanalytics/issues"
+        "issues": "https://github.com/lerni/silverstripe-tracking/issues"
     },
     "suggest": {
         "lerni/klaro-cookie-consent": "Silverstripe Klaro! Consent Manager"
@@ -33,5 +32,6 @@
         "psr-4": {
             "Kraftausdruck\\": "src/kraftausdruck/"
         }
-    }
+    },
+    "abandoned": "lerni/silverstripe-tracking"
 }
