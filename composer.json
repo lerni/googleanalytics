@@ -16,7 +16,8 @@
         "email": "le@kraftausdruck.ch"
     }],
     "require": {
-        "lerni/silverstripe-tracking": "^5.0"
+        "silverstripe/framework": "^4.0 || ^5.0",
+        "silverstripe/cms": "^4.0 || ^5.0"
     },
     "minimum-stability": "dev",
     "extra": {
